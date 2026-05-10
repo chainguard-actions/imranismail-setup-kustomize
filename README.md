@@ -1,14 +1,40 @@
-# imranismail/setup-kustomize
+![build-test](https://github.com/imranismail/setup-kustomize/workflows/build-test/badge.svg)
 
-Setup a Kustomize environment and add it to the path
+## Description
 
-Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/imranismail/setup-kustomize](https://github.com/imranismail/setup-kustomize).
+Install any kustomize version as a step in your workflow
 
-## Versions
+## Options
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/setup-kustomize/tree/v2.0.0) | — |
+Every argument is optional.
+
+| Input               | Description                                                                                                                                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `github-token`      | PAT (Personal Access Token) for authorizing the repository.<br>_Defaults to **\${{ github.token }}**_                                                                                                                                   |
+| `kustomize-version` | Semver of kustomize to use. Examples: `10.x`, `10.15.1`, `>=10.15.0`<br>_Defaults to **\***_                                                                                                                                            |
+| `fail-fast`         | When github rate limits us, fail immediately or retry after the timeout that github wishes from us? Note: When setting this to `false` (which is the default!), a github workflow might accrue a long (and possibly expensive) runtime. |
+
+## Usage
+
+```yaml
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  create-deployment-branch:
+    runs-on: ubuntu-latest
+    needs:
+      - publish-image
+    steps:
+      - uses: imranismail/setup-kustomize@v1
+      - run: |
+          kustomize edit set image app:${GITHUB_SHA}
+          git add .
+          git commit -m "Set `app` image tag to `${GITHUB_SHA}`"
+          git push
+```
 
 ## Privacy
 
