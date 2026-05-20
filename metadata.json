@@ -1,7 +1,0 @@
-{
-  "owner": "imranismail",
-  "name": "setup-kustomize",
-  "visibility": "public",
-  "description": "Setup a Kustomize environment and add it to the path",
-  "block_publish": false
-}
