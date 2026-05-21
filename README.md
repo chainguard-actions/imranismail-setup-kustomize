@@ -8,10 +8,10 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1.7.3 | [`v1.7.3`](https://github.com/chainguard-actions/setup-kustomize/tree/v1.7.3) | — |
-| v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/setup-kustomize/tree/v2.0.0) | — |
-| v2.1.0-rc | [`v2.1.0-rc`](https://github.com/chainguard-actions/setup-kustomize/tree/v2.1.0-rc) | — |
-| v3.0.0 | [`v3.0.0`](https://github.com/chainguard-actions/setup-kustomize/tree/v3.0.0) | — |
+| v1.7.3 | [`v1.7.3`](https://github.com/chainguard-actions/imranismail--setup-kustomize/tree/v1.7.3) | — |
+| v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/imranismail--setup-kustomize/tree/v2.0.0) | — |
+| v2.1.0-rc | [`v2.1.0-rc`](https://github.com/chainguard-actions/imranismail--setup-kustomize/tree/v2.1.0-rc) | — |
+| v3.0.0 | [`v3.0.0`](https://github.com/chainguard-actions/imranismail--setup-kustomize/tree/v3.0.0) | — |
 
 ## Privacy
 
