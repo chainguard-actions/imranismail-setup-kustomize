@@ -1,0 +1,22 @@
+name: Test basic usage (default version)
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: setup
+        uses: .
+        with:
+          github-token: ${{ github.token }}
+      - name: Assert kustomize is on PATH
+        run: |
+          echo "Checking kustomize is available..."
+          which kustomize || { echo "FAIL: kustomize not found on PATH"; exit 1; }
+          echo "PASS: kustomize found at $(which kustomize)"
+      - name: Assert kustomize runs
+        run: |
+          echo "Running kustomize version..."
+          kustomize version || { echo "FAIL: kustomize version command failed"; exit 1; }
+          echo "PASS: kustomize version ran successfully"

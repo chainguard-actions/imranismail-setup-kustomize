@@ -1,0 +1,30 @@
+name: Test fail-fast mode
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: setup
+        uses: .
+        with:
+          kustomize-version: '5.1.0'
+          github-token: ${{ github.token }}
+          fail-fast: 'true'
+      - name: Assert kustomize is on PATH
+        run: |
+          echo "Checking kustomize is available..."
+          which kustomize || { echo "FAIL: kustomize not found on PATH"; exit 1; }
+          echo "PASS: kustomize found at $(which kustomize)"
+      - name: Assert kustomize version is correct
+        run: |
+          echo "Running kustomize version..."
+          VERSION_OUTPUT=$(kustomize version)
+          echo "Version output: $VERSION_OUTPUT"
+          if echo "$VERSION_OUTPUT" | grep -q "5.1.0"; then
+            echo "PASS: kustomize version 5.1.0 confirmed"
+          else
+            echo "FAIL: expected version 5.1.0 but got: $VERSION_OUTPUT"
+            exit 1
+          fi
