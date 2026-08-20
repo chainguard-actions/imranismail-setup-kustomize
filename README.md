@@ -8,9 +8,9 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1.7.3 | [`v1.7.3`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v1.7.3) | — |
+| v1.7.3 | [`v1.7.3`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v1.7.3) | [`8747e0b`](https://github.com/imranismail/setup-kustomize/commit/8747e0b5cf2aa311dce56dc5d8fa171e9804d7fa) |
 | v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v2.0.0) | [`6691bde`](https://github.com/imranismail/setup-kustomize/commit/6691bdeb1b0a3286fb7f70fd1423c10e81e5375f) |
-| v2.1.0-rc | [`v2.1.0-rc`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v2.1.0-rc) | [`2ba527d`](https://github.com/imranismail/setup-kustomize/commit/2ba527d4d055ab63514ba50a99456fc35684947f) |
+| v2.1.0-rc | [`v2.1.0-rc`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v2.1.0-rc) | — |
 | v3.0.0 | [`v3.0.0`](https://github.com/chainguard-actions/imranismail-setup-kustomize/tree/v3.0.0) | [`53f941b`](https://github.com/imranismail/setup-kustomize/commit/53f941b41dca13ed61874bbc6b4b6e1562877530) |
 
 ## Privacy
